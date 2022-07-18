@@ -20,8 +20,6 @@ public class UserController {
 
     @PostMapping("/notify")
     public ResponseEntity<User> notify(@RequestBody UserDto user) {
-
-        System.out.println(user);
         User createdUser = userService.createUser(user);
         return ResponseEntity.ok(createdUser);
     }
